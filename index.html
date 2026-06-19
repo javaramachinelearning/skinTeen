@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>스킨틴 (SkinTeen) - 10대 맞춤형 피부 솔루션</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Mobile Simulator Framework -->
+  <div class="phone-simulator">
+    
+    <!-- App Header (Hidden on Intro, visible elsewhere) -->
+    <header id="app-header" class="hidden">
+      <button class="btn-back" id="btn-header-back" aria-label="이전 화면으로 이동">
+        <!-- SVG Back Arrow Icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <span class="header-title" id="header-title">스킨틴</span>
+      <span style="width: 24px;"></span> <!-- Spacer for visual balance -->
+    </header>
+
+    <!-- Main Navigation Content Wrapper -->
+    <main>
+      
+      <!-- 1. Intro View -->
+      <section class="view-section active" id="view-intro">
+        <div class="intro-logo-container">
+          <span class="logo-badge">10대 맞춤형 피부 솔루션</span>
+          <h1 class="intro-logo">SkinTeen</h1>
+          <p class="intro-subtitle">내 피부에 꼭 맞는 성분과<br>화장품을 1분 만에 진단해봐요!</p>
+        </div>
+        
+        <div class="intro-graphic" aria-hidden="true">✨</div>
+        
+        <div class="intro-footer">
+          <button class="btn-primary" id="btn-start">
+            지금 시작하기
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 2. User Info Input View -->
+      <section class="view-section" id="view-user-info">
+        <div class="content-body">
+          <div class="title-group">
+            <h2>기본 정보를<br>입력해 주세요</h2>
+            <p>10대 맞춤 분석 결과를 제공하기 위해 활용됩니다.</p>
+          </div>
+
+          <!-- Age Input -->
+          <div class="input-section">
+            <label class="input-label" for="age-slider">나이(만 나이)</label>
+            <div class="age-selector-wrapper">
+              <input type="range" id="age-slider" class="age-slider" min="10" max="19" value="14" step="1">
+              <span class="age-value-badge" id="age-badge">만 14세</span>
+            </div>
+          </div>
+
+          <!-- Gender Input -->
+          <div class="input-section">
+            <span class="input-label">성별</span>
+            <div class="gender-grid">
+              <div class="gender-card" id="gender-male" role="radio" aria-checked="false" tabindex="0">
+                <span class="gender-icon">👦</span>
+                <span class="gender-name">남성</span>
+              </div>
+              <div class="gender-card" id="gender-female" role="radio" aria-checked="false" tabindex="0">
+                <span class="gender-icon">👧</span>
+                <span class="gender-name">여성</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skin Concerns (Multi select up to 3) -->
+          <div class="input-section">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="input-label">피부 고민 선택</span>
+              <div class="concern-counter"><span id="concern-count">0</span> / 3</div>
+            </div>
+            <!-- Dynamic Grid Rendered by app.js -->
+            <div class="concerns-grid" id="concerns-grid"></div>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <button class="btn-primary" id="btn-to-survey" disabled>
+            피부 설문 진행하기
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 3. Survey View -->
+      <section class="view-section" id="view-survey">
+        <div class="content-body">
+          <div class="survey-progress-container">
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="survey-progress-fill"></div>
+            </div>
+            <div class="progress-text">
+              <span>스킨 분석 중...</span>
+              <span>Q. <strong id="survey-step-num">1</strong> / 3</span>
+            </div>
+          </div>
+          
+          <!-- Question Box Rendered by app.js -->
+          <div class="question-box" id="survey-question-container"></div>
+        </div>
+        
+        <!-- Next button is not strictly required here as picking an option auto-advances -->
+      </section>
+
+      <!-- 4. Result View -->
+      <section class="view-section" id="view-result">
+        <div class="content-body">
+          <div class="title-group">
+            <h2>진단 완료! 🔍</h2>
+            <p>나의 정밀 피부 타입 매칭 결과입니다.</p>
+          </div>
+          
+          <!-- Diagnosis Skin Card Rendered by app.js -->
+          <div class="result-card" id="result-card-content"></div>
+          
+          <!-- User Profile Summary Card -->
+          <div class="profile-summary-box" id="user-summary-box"></div>
+        </div>
+        
+        <div style="margin-top: 24px;">
+          <button class="btn-primary" id="btn-to-products">
+            맞춤 화장품 추천 보러가기
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- 5. Products Recommendation & Filter View -->
+      <section class="view-section" id="view-products">
+        <div class="content-body">
+          <div class="product-header-sticky">
+            <div class="title-group">
+              <h2>맞춤 추천 화장품 🧴</h2>
+              <p>내 분석 타입에 딱 맞는 전용 추천 목록입니다.</p>
+            </div>
+            
+            <!-- Category Tabs (Skincare / Cleansing) -->
+            <div class="product-tabs">
+              <button class="tab-btn active" id="tab-skincare">스킨케어</button>
+              <button class="tab-btn" id="tab-cleansing">클렌징</button>
+            </div>
+            
+            <!-- Price Filters (<10,000 / <20,000) -->
+            <div class="price-filters">
+              <button class="filter-pill active" id="filter-all">전체 가격</button>
+              <button class="filter-pill" id="filter-10k">1만원 이하</button>
+              <button class="filter-pill" id="filter-20k">2만원 이하</button>
+            </div>
+          </div>
+          
+          <!-- Product Cards Grid Rendered by app.js -->
+          <div class="product-list-container" id="product-list-container"></div>
+        </div>
+        
+        <div style="margin-top: 24px;">
+          <button class="btn-secondary" id="btn-reset">다시 테스트하기</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
