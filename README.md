@@ -1,6 +1,5 @@
 - PRD
   - 작성 및 AI 통한 ROCK 질문 변화 (AI 사용)
- 
 
 - 앱제작
   - antigravity 다운로드 설치
@@ -9,7 +8,7 @@
   - 제출한 PRD 를 ROCK 관점으로 질문
   - 지정된 폴더에 생성된 html 브라우저에서 실행
   - 기능 점검
-  - 구글 Gemini API 키 생성
+  - (필요시) 구글 Gemini API 키 생성
     - Google AI Studio
     - Dashboard
     - API 키 만들기
