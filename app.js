@@ -1,4 +1,4 @@
-// SkinTeen App Logic & Data
+﻿// SkinTeen App Logic & Data
 
 // ==========================================
 // 1. Data Definitions
@@ -100,7 +100,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧪',
     skinTypes: ['oily'],
     tags: ['피지조절', '가벼운 워터타입'],
-    description: '국내산 티트리 추출물이 85% 들어있어 청량감을 주며, 화난 여드름을 즉각 가라앉히는 산뜻한 토너.'
+    description: '국내산 티트리 추출물이 85% 들어있어 청량감을 주며, 화난 여드름을 즉각 가라앉히는 산뜻한 토너.',
+    url: 'https://www.coupang.com/np/search?q=리얼 티트리 시카 카밍 토너'
   },
   {
     id: 'oily_skincare_2',
@@ -111,7 +112,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧴',
     skinTypes: ['oily'],
     tags: ['트러블 진정', '잡티 케어'],
-    description: '고농축 마데카소사이드 성분이 들어있어 붉은 트러블 자국을 빠르게 진정시키고 얼룩덜룩함을 개선합니다.'
+    description: '고농축 마데카소사이드 성분이 들어있어 붉은 트러블 자국을 빠르게 진정시키고 얼룩덜룩함을 개선합니다.',
+    url: 'https://www.coupang.com/np/search?q=병풀 시카 흔적 에셼스'
   },
   {
     id: 'oily_cleansing_1',
@@ -122,7 +124,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧼',
     skinTypes: ['oily'],
     tags: ['여드름완화', '바하성분'],
-    description: '식약처 여드름 완화 기능성 인증! 모공 속 꽉 찬 기름과 블랙헤드를 말끔하게 씻어주는 미산성 클렌저.'
+    description: '식약처 여드름 완화 기능성 인증! 모공 속 꽉 찬 기름과 블랙헤드를 말끔하게 씻어주는 미산성 클렌저.',
+    url: 'https://www.coupang.com/np/search?q=바하 클리어 %ED%8%B8러ㅂ 폼클렌저'
   },
   {
     id: 'oily_cleansing_2',
@@ -133,7 +136,8 @@ const PRODUCT_DATABASE = [
     emoji: '🫧',
     skinTypes: ['oily', 'combination'],
     tags: ['약산성', '자극 최소화'],
-    description: '누르면 풍성한 거품이 바로 나오는 저자극 버블폼. 세안 후 미끌거림 없는 상쾌하고 깨끗한 마무리.'
+    description: '누르면 풍성한 거품이 바로 나오는 저자극 버블폼. 세안 후 미끌거림 없는 상쾌하고 깨끗한 마무리.',
+    url: 'https://www.coupang.com/np/search?q=어성쳀 생녹차 약산성 벼폼'
   },
 
   // --- 건성용 제품 ---
@@ -146,7 +150,8 @@ const PRODUCT_DATABASE = [
     emoji: '💧',
     skinTypes: ['dry'],
     tags: ['10중보습', '피부속물광'],
-    description: '크기가 다른 10가지 히알루론산 분자가 피부 겉부터 속 깊은 곳까지 촉촉함을 차곡차곡 쌓아줍니다.'
+    description: '크기가 다른 10가지 히알루론산 분자가 피부 겉부터 속 깊은 곳까지 촉촉함을 차곡차곡 쌓아줍니다.',
+    url: 'https://www.coupang.com/np/search?q=히알루론산 10중 수분 앸플'
   },
   {
     id: 'dry_skincare_2',
@@ -157,7 +162,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧴',
     skinTypes: ['dry'],
     tags: ['장벽보호', '48시간 잠금'],
-    description: '고순도 세라마이드가 건조함으로 갈라지고 튼 피부 장벽을 꼼꼼히 메워 튼튼하고 촉촉한 피부로 케어합니다.'
+    description: '고순도 세라마이드가 건조함으로 갈라지고 튼 피부 장벽을 꼼꼼히 메워 튼튼하고 촉촉한 피부로 케어합니다.',
+    url: 'https://www.coupang.com/np/search?q=셸라마이드 인텐스 고복 크림'
   },
   {
     id: 'dry_cleansing_1',
@@ -168,7 +174,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧼',
     skinTypes: ['dry'],
     tags: ['당김없는세안', '아미노산'],
-    description: '천연 보습 인자인 아미노산 계면활성제를 사용하여 세안 후 물기를 닦아도 당기지 않는 쫀쫀한 폼.'
+    description: '천연 보습 인자인 아미노산 계면활성제를 사용하여 세안 후 물기를 닦아도 당기지 않는 쫀쫀한 폼.',
+    url: 'https://www.coupang.com/np/search?q=아미노 카밍 모이스처 클렌징 폼'
   },
   {
     id: 'dry_cleansing_2',
@@ -179,7 +186,8 @@ const PRODUCT_DATABASE = [
     emoji: '🫧',
     skinTypes: ['dry', 'combination'],
     tags: ['우유보습', '순한세정'],
-    description: '부드러운 에멀전 제형으로 각질을 부드럽게 재워주고, 모공 속 노폐물은 밀크 캡슐로 보습하며 제거합니다.'
+    description: '부드러운 에멀전 제형으로 각질을 부드럽게 재워주고, 모공 속 노폐물은 밀크 캡슐로 보습하며 제거합니다.',
+    url: 'https://www.coupang.com/np/search?q=촉촉 코코넛 ㅁ크 딥 클렌저'
   },
 
   // --- 수부지용 제품 ---
@@ -192,7 +200,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧴',
     skinTypes: ['combination'],
     tags: ['끈적임제로', '급속수분충전'],
-    description: '시원한 쿨링감의 수분 젤 텍스처로, 겉돌거나 유분 번들거림 없이 가벼운 수분막만 피부 속 깊이 전달합니다.'
+    description: '시원한 쿨링감의 수분 젤 텍스처로, 겉돌거나 유분 번들거림 없이 가벼운 수분막만 피부 속 깊이 전달합니다.',
+    url: 'https://www.coupang.com/np/search?q=자작나무 수분 젤 크림'
   },
   {
     id: 'comb_skincare_2',
@@ -203,7 +212,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧪',
     skinTypes: ['combination'],
     tags: ['유수분밸런스', '어성초진정'],
-    description: '수분 부족으로 번들거리는 유분 피지는 가라앉히고 메마른 각질층에는 청량한 어성초 수분을 밀어 넣는 수부지 추천템.'
+    description: '수분 부족으로 번들거리는 유분 피지는 가라앉히고 메마른 각질층에는 청량한 어성초 수분을 밀어 넣는 수부지 추천템.',
+    url: 'https://www.coupang.com/np/search?q=어성쳀 카밍 수분 진정 셸러림'
   },
   {
     id: 'comb_cleansing_1',
@@ -214,7 +224,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧼',
     skinTypes: ['combination', 'dry'],
     tags: ['젤투폼', '미세먼지 세정'],
-    description: '순한 젤 제형이 물과 닿으면 보들보들한 거품으로 변해 겉에 낀 피지는 녹이고 피부 속 수분은 지켜냅니다.'
+    description: '순한 젤 제형이 물과 닿으면 보들보들한 거품으로 변해 겉에 낀 피지는 녹이고 피부 속 수분은 지켜냅니다.',
+    url: 'https://www.coupang.com/np/search?q=약산성 매직 히알루론산 젤 폼'
   },
   {
     id: 'comb_cleansing_2',
@@ -225,7 +236,8 @@ const PRODUCT_DATABASE = [
     emoji: '🧼',
     skinTypes: ['combination', 'oily'],
     tags: ['천연수제비누', '피지아웃'],
-    description: '자연에서 유래한 유기농 어성초 가루를 가득 담아 예민한 사춘기 피부의 유수분 균형을 바로잡아주는 클렌징 바.'
+    description: '자연에서 유래한 유기농 어성초 가루를 가득 담아 예민한 사춘기 피부의 유수분 균형을 바로잡아주는 클렌징 바.',
+    url: 'https://www.coupang.com/np/search?q=어성쳀 딥 클리어 클렌징 바'
   }
 ];
 
@@ -738,7 +750,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </p>
           <div class="product-price-box">
             <span class="product-price">${priceFormatted}</span>
-            <button class="btn-buy" onclick="alert('${prod.name} 상품 구매 링크로 이동합니다!')">구매</button>
+            <a href="${prod.url}" target="_blank" class="btn-buy" style="text-decoration: none; text-align: center; display: inline-block;">구매</a>
           </div>
         </div>
       `;
@@ -749,3 +761,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Onboarding Step
   navigateTo('intro');
 });
+
