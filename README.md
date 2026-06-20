@@ -1,0 +1,37 @@
+- PRD
+  - 작성 및 AI 통한 ROCK 질문 변화
+ 
+
+- 앱제작
+  - antigravity 다운로드 설치
+  - 프로젝트 생성
+  - 폴더 지정
+  - 제출한 PRD 를 ROCK 관점으로 질문
+  - 지정된 폴더에 생성된 html 브라우저에서 실행
+  - 기능 점검
+  - 구글 Gemini API 키 생성
+    - Google AI Studio
+    - Dashboard
+    - API 키 만들기
+    - 프로젝트 생성
+    - 프로젝트명 입력 (antigravity_study)
+    - 프로젝트 세부정보 링크 클릭
+    - key 복사
+  - key 복사된것을 가지고 html 의 기능 테스트
+
+
+- 배포
+  - GitHub
+  - sign up (계정생성)
+  - 구글 계정 연동
+  - 좌상단 New 클릭하여 새 저장소 (Repository) 만들기 (antigravity_study)
+    - public 지정
+    - antigravity 가 생성한 폴더 전체를 업로드 (uploading an existing file)
+  - 우상단 Settings
+    - 좌하단 pages
+    - Branch
+    - main 으로 변경 (root 자동지정)
+    - Saves
+  - 중상단 Actions
+    - 배포상태 확인 (녹색 상태면 완료)
+  - url 클릭해 웹페이지 확인
