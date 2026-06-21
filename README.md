@@ -1,7 +1,8 @@
-- PRD
+# PRD (6하원칙)
   - 작성 및 AI 통한 ROCK 질문 변화 (AI 사용)
 
-- 앱제작
+
+# 앱제작
   - antigravity 다운로드 설치
     - Product : Antigravity 2.0 선택
     - Donwload for x64 (Windows)
@@ -27,7 +28,7 @@
   - AI 기능 테스트
 
 
-- 배포
+# 배포
   - GitHub
   - sign up (계정생성)
   - 구글 계정 연동
