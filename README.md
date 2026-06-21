@@ -9,9 +9,9 @@
   	- Security Notice 동의 안함
   	- Build with Google 선택 안함
   - 프로젝트 생성
+  - 폴더 지정
     - Setting
       - Agent Behavior > Review Policy : Always ask
-  - 폴더 지정
   - 제출한 PRD 를 ROCK 관점으로 질문
   - 지정된 폴더에 생성된 html 브라우저에서 실행
   - 기능 점검
