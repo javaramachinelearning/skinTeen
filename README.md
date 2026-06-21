@@ -3,7 +3,14 @@
 
 - 앱제작
   - antigravity 다운로드 설치
+    - Product : Antigravity 2.0 선택
+    - Donwload for x64 (Windows)
+  	- 구글 계정 가입 및 로그인
+  	- Security Notice 동의 안함
+  	- Build with Google 선택 안함
   - 프로젝트 생성
+    - Setting
+      - Agent Behavior > Review Policy : Always ask
   - 폴더 지정
   - 제출한 PRD 를 ROCK 관점으로 질문
   - 지정된 폴더에 생성된 html 브라우저에서 실행
@@ -16,7 +23,8 @@
     - 프로젝트명 입력 (antigravity_study)
     - 프로젝트 세부정보 링크 클릭
     - key 복사
-  - key 복사된것을 가지고 html 의 기능 테스트
+    - 복사된 key 값 붙여넣기
+  - AI 기능 테스트
 
 
 - 배포
